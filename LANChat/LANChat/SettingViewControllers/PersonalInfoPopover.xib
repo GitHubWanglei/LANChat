@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PersonalInfoPopover">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="229" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-tO-byU">
+                    <rect key="frame" x="8" y="34" width="99" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="95" id="Tum-d6-w1I"/>
+                        <constraint firstAttribute="height" constant="17" id="WYD-DJ-d3Q"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="用戶名不能為空." id="1fI-F9-Rzr">
+                        <font key="font" size="12" name=".PingFangSC-Regular"/>
+                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="icn-HS-9d5">
+                    <rect key="frame" x="8" y="11" width="203" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="199" id="UsJ-es-v20"/>
+                        <constraint firstAttribute="height" constant="17" id="yIU-tT-ccq"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="用戶名最大長度不能超過15個字符." id="o5c-YN-f7a">
+                        <font key="font" size="12" name=".PingFangSC-Regular"/>
+                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="icn-HS-9d5" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="6mG-Kh-4UP"/>
+                <constraint firstItem="gl4-tO-byU" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="Gle-Wd-bxx"/>
+                <constraint firstItem="gl4-tO-byU" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="aKv-YI-KTL"/>
+                <constraint firstItem="icn-HS-9d5" firstAttribute="top" secondItem="gl4-tO-byU" secondAttribute="bottom" constant="6" id="bKc-1D-JFF"/>
+            </constraints>
+            <point key="canvasLocation" x="5.5" y="273.5"/>
+        </customView>
+    </objects>
+</document>

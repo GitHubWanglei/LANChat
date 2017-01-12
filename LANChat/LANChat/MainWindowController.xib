@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
+            <connections>
+                <outlet property="ChangeStatusMenu" destination="E2S-vD-wpt" id="gfd-EC-hZ1"/>
+                <outlet property="offlineItem" destination="EUu-3p-1Wk" id="z38-AA-iRp"/>
+                <outlet property="onlineItem" destination="wWU-nq-9S8" id="eEe-CG-Kha"/>
+                <outlet property="settingItem" destination="z7f-Qh-IEl" id="UWC-PH-eSU"/>
+                <outlet property="settingPanel" destination="Kpm-Dw-9xX" id="vY9-fT-CpD"/>
+                <outlet property="statusButton" destination="pIi-nF-1FG" id="ZYO-9d-AiQ"/>
+                <outlet property="toolbar" destination="96T-Nw-Lec" id="qbQ-fL-sTQ"/>
+                <outlet property="userInfoView" destination="MHw-vI-CZu" id="6DV-bn-uLY"/>
+                <outlet property="userNameLable" destination="eZa-0I-lmq" id="XR1-Yj-r2Z"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="LANChat" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="543" y="266" width="800" height="560"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <value key="minSize" type="size" width="800" height="560"/>
+            <value key="maxSize" type="size" width="800" height="560"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="800" height="560"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="ACAAE909-EA6E-40CA-9D1D-2B30C19B9F06" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="small" id="96T-Nw-Lec">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="19461286-BC97-4834-B555-B1C45B879CBE" label="" paletteLabel="Custom View" tag="-1" id="ccm-DK-lgp">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="163" height="23"/>
+                        <size key="maxSize" width="300" height="96"/>
+                        <customView key="view" id="MHw-vI-CZu">
+                            <rect key="frame" x="0.0" y="14" width="300" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZa-0I-lmq">
+                                    <rect key="frame" x="18" y="8" width="234" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="81T-K2-2Bs">
+                                        <font key="font" metaFont="system" size="14"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-nF-1FG">
+                                    <rect key="frame" x="256" y="7" width="23" height="23"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStatusAvailable" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="X4Z-Da-dC7">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="changeStatusAction:" target="-2" id="aKF-os-s5K"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </customView>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="lbp-Jb-gHU"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="6Tq-EZ-O0r"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="e1m-eq-Ndm"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="DAz-BI-6P3"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="EbE-e0-FZi"/>
+                    <toolbarItem implicitItemIdentifier="2B2F0181-3F75-43F7-A32A-7AF869363F58" label="設置" paletteLabel="Toolbar Item" tag="-1" image="NSAdvanced" id="z7f-Qh-IEl">
+                        <connections>
+                            <action selector="settingItemAction:" target="-2" id="a26-mG-nXL"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="D241DCE0-6524-499B-BAD6-79C75BF64024" label="" paletteLabel="Toolbar Item" tag="-1" id="bqp-rq-8FF">
+                        <size key="minSize" width="10" height="0.0"/>
+                        <size key="maxSize" width="10" height="0.0"/>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="EbE-e0-FZi"/>
+                    <toolbarItem reference="ccm-DK-lgp"/>
+                    <toolbarItem reference="bqp-rq-8FF"/>
+                    <toolbarItem reference="z7f-Qh-IEl"/>
+                    <toolbarItem reference="bqp-rq-8FF"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="176" y="137"/>
+        </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Kpm-Dw-9xX" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="112" width="538" height="329"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="MUR-u9-qa0">
+                <rect key="frame" x="0.0" y="0.0" width="538" height="329"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <point key="canvasLocation" x="128" y="672"/>
+        </window>
+        <menu id="E2S-vD-wpt">
+            <items>
+                <menuItem isSeparatorItem="YES" id="G1M-Nz-JwT"/>
+                <menuItem title="在线" image="NSStatusAvailable" id="wWU-nq-9S8">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onlineItemAction:" target="-2" id="IXA-4Y-gOy"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Sbk-bK-c0H"/>
+                <menuItem title="离线" image="NSStatusUnavailable" id="EUu-3p-1Wk">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="offlineItemAction:" target="-2" id="rGf-Zw-qVM"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="6Rv-L6-eQ5"/>
+            </items>
+            <point key="canvasLocation" x="104" y="-283"/>
+        </menu>
+    </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
+    </resources>
+</document>
